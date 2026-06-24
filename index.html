@@ -11,35 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    #cursor {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #4361EE;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width .3s, height .3s, background .3s;
-    }
 
-    #cursor-ring {
-      position: fixed;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 1.5px solid rgba(67, 97, 238, 0.4);
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-    }
-  </style>
 </head>
 
 <body>
-  <div id="cursor"></div>
-  <div id="cursor-ring"></div>
+
 
   <!-- NAV -->
   <nav>
@@ -540,17 +516,7 @@
     });
   </script>
 
-  <script>
-    const cur = document.getElementById('cursor');
-    const ring = document.getElementById('cursor-ring');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });
-    (function loop() { rx += (mx - rx) * .1; ry += (my - ry) * .1; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
-    document.querySelectorAll('a,button,.work-card,.service-item').forEach(el => {
-      el.addEventListener('mouseenter', () => { cur.style.width = '40px'; cur.style.height = '40px'; cur.style.background = '#0A0A0A'; ring.style.opacity = '0'; });
-      el.addEventListener('mouseleave', () => { cur.style.width = '10px'; cur.style.height = '10px'; cur.style.background = '#4361EE'; ring.style.opacity = '1'; });
-    });
-  </script>
+
 
 </body>
 
