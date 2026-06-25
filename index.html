@@ -16,6 +16,11 @@
 
 <body>
 
+<a href="mailto:kasaredhruvil@gmail.com" class="hire-float" id="hireBtn">
+  <span class="hire-pulse"></span>
+  💬 Hire Me
+</a>
+
 
   <!-- NAV -->
   <nav>
@@ -85,7 +90,7 @@
       </script>
       <div class="hero-role">
         <div>
-          <p class="hero-title">Full-Stack Developer</p>
+          <p class="hero-title"><span id="typed-title"></span></p>
           <p class="hero-desc">Building digital products that are clean, scalable, and conversion-focused. React ·
             Node.js · Supabase.</p>
           <a href="#work" class="btn-primary">View My Work ↗</a>
@@ -509,6 +514,25 @@
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script>
+  new Typed('#typed-title', {
+    strings: [
+      'Full-Stack Developer',
+      'React Developer',
+      'Node.js Developer',
+      'Python Developer',
+      'UI/UX Enthusiast',
+      'Open to Freelance'
+    ],
+    typeSpeed: 55,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
+  });
+  </script>
 </body>
 
 </html>
