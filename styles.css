@@ -471,3 +471,59 @@ footer {
   });
 </script>
 */
+
+/* ─── SKILLS ─── */
+#skills {
+  padding: 100px 48px;
+  background: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.skills-col-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4361EE;
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  border-color: #0A0A0A;
+  color: #0A0A0A;
+  transform: translateY(-2px);
+}
+
+@media(max-width: 768px) {
+  .skills-categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
